@@ -1,2 +1,2 @@
 # CPE-322
-Design 6
+Spring 2022 Semester
