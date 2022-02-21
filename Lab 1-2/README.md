@@ -49,6 +49,7 @@ I pledge my honor that I have abided by the Stevens Honor System.
 ![](Screenshots/sc14_ping-localhost.png)
 
 ### netstat
+```
 pi@raspberrypi:~/demo $ netstat
 Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State      
@@ -284,3 +285,4 @@ unix  3      [ ]         STREAM     CONNECTED     12210
 unix  3      [ ]         STREAM     CONNECTED     10221    /run/user/1000/bus
 unix  3      [ ]         STREAM     CONNECTED     13622    /run/user/1000/bus
 unix  3      [ ]         STREAM     CONNECTED     15601    /run/dbus/system_bus_socket
+```
