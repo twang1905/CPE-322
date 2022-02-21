@@ -7,46 +7,46 @@ I pledge my honor that I have abided by the Stevens Honor System.
 ![](Screenshots/sc1_hostname.png)
 
 ### env
-![](sc2_env1.png)
+![](Screenshots/sc2_env1.png)
 
 ### ps
-![](sc3_ps.png)
+![](Screenshots/sc3_ps.png)
 
 ### pwd
-![](sc4_pwd.png)
+![](Screenshots/sc4_pwd.png)
 
 ### git clone
-![](sc5_git-clone.png)
+![](Screenshots/sc5_git-clone.png)
 
 ### cd iot, ls, cd, and df
-![](sc6_cd-iot.png)
+![](Screenshots/sc6_cd-iot.png)
 
 ### mkdir demo and cd demo
-![](sc7_cat-file.png)
+![](Screenshots/sc7_cat-file.png)
 
 ### nano file
-![](sc7_nano-file.png)
+![](Screenshots/sc7_nano-file.png)
 
 ### cat file
-![](sc8_cat-file.png)
+![](Screenshots/sc8_cat-file.png)
 
 ### cp, mv and rm
-![](sc9_cp-mv-rm.png)
+![](Screenshots/sc9_cp-mv-rm.png)
 
 ### clear
-![](sc10_clear.png)
+![](Screenshots/sc10_clear.png)
 
 ### man uname
-![](sc11_man-uname.png)
+![](Screenshots/sc11_man-uname.png)
 
 ### uname -a
-![](sc12_uname-a.png)
+![](Screenshots/sc12_uname-a.png)
 
 ### ifconfig
-![](sc13_ifconfig.png)
+![](Screenshots/sc13_ifconfig.png)
 
 ### ping localhost
-![](sc14_ping-localhost.png)
+![](Screenshots/sc14_ping-localhost.png)
 
 ### netstat
 pi@raspberrypi:~/demo $ netstat
