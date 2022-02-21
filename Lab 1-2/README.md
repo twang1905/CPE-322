@@ -4,7 +4,7 @@ I pledge my honor that I have abided by the Stevens Honor System.
 # Assignment
 
 ### hostname
-![hostname](sc1_hostname.png)
+![](Screenshots/sc1_hostname.png)
 
 ### env
 ![](sc2_env1.png)
