@@ -1,0 +1,95 @@
+pi@raspberrypi:~ $ sudo apt update
+Hit:1 http://raspbian.raspberrypi.org/raspbian bullseye InRelease
+Hit:2 http://archive.raspberrypi.org/debian bullseye InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+24 packages can be upgraded. Run 'apt list --upgradable' to see them.
+pi@raspberrypi:~ $ sudo apt install mariadb-server mariadb-client
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+mariadb-client is already the newest version (1:10.5.12-0+deb11u1).
+mariadb-server is already the newest version (1:10.5.12-0+deb11u1).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+pi@raspberrypi:~ $ sudo apt install python3-mysqldb
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+python3-mysqldb is already the newest version (1.4.4-2+b1).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+pi@raspberrypi:~ $ sudo pip3 install -U mysqlclient
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: mysqlclient in /usr/local/lib/python3.9/dist-packages (2.1.0)
+Collecting mysqlclient
+  Using cached https://www.piwheels.org/simple/mysqlclient/mysqlclient-2.1.0-cp39-cp39-linux_armv7l.whl (106 kB)
+  Downloading https://www.piwheels.org/simple/mysqlclient/mysqlclient-2.0.3-cp39-cp39-linux_armv7l.whl (106 kB)
+     |████████████████████████████████| 106 kB 373 kB/s 
+pi@raspberrypi:~ $ sudo mysql_secure_installation
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user. If you've just installed MariaDB, and
+haven't set the root password yet, you should just press enter here.
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password or using the unix_socket ensures that nobody
+can log into the MariaDB root user without the proper authorisation.
+
+You already have your root account protected, so you can safely answer 'n'.
+
+Switch to unix_socket authentication [Y/n] n
+ ... skipping.
+
+You already have your root account protected, so you can safely answer 'n'.
+
+Change the root password? [Y/n] n
+ ... skipping.
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] y
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] y
+ ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] y
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] y
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!

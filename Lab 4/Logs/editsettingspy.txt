@@ -1,0 +1,4 @@
+pi@raspberrypi:~/stevens $ cd stevens
+pi@raspberrypi:~/stevens/stevens $ ls
+asgi.py  __init__.py  __pycache__  settings.py  urls.py  wsgi.py
+pi@raspberrypi:~/stevens/stevens $ nano settings.py

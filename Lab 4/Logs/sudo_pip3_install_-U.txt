@@ -1,0 +1,76 @@
+pi@raspberrypi:~/CPE-322 $ sudo pip3 install -U setuptools
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (52.0.0)
+Collecting setuptools
+  Downloading https://www.piwheels.org/simple/setuptools/setuptools-60.9.3-py3-none-any.whl (1.1 MB)
+     |████████████████████████████████| 1.1 MB 363 kB/s 
+Installing collected packages: setuptools
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 52.0.0
+    Not uninstalling setuptools at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'setuptools'. No files were found to uninstall.
+Successfully installed setuptools-60.9.3
+pi@raspberrypi:~/CPE-322 $ sudo pip3 install -U django
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting django
+  Downloading https://www.piwheels.org/simple/django/Django-4.0.2-py3-none-any.whl (8.0 MB)
+     |████████████████████████████████| 8.0 MB 169 kB/s 
+Collecting asgiref<4,>=3.4.1
+  Downloading https://www.piwheels.org/simple/asgiref/asgiref-3.5.0-py3-none-any.whl (22 kB)
+Collecting sqlparse>=0.2.2
+  Downloading https://www.piwheels.org/simple/sqlparse/sqlparse-0.4.2-py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 9.8 kB/s 
+Installing collected packages: sqlparse, asgiref, django
+Successfully installed asgiref-3.5.0 django-4.0.2 sqlparse-0.4.2
+pi@raspberrypi:~/CPE-322 $ sudo pip3 install -U djangorestframework
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting djangorestframework
+  Downloading https://www.piwheels.org/simple/djangorestframework/djangorestframework-3.13.1-py3-none-any.whl (958 kB)
+     |████████████████████████████████| 958 kB 351 kB/s 
+Collecting pytz
+  Downloading https://www.piwheels.org/simple/pytz/pytz-2021.3-py3-none-any.whl (511 kB)
+     |████████████████████████████████| 511 kB 348 kB/s 
+Requirement already satisfied: django>=2.2 in /usr/local/lib/python3.9/dist-packages (from djangorestframework) (4.0.2)
+Requirement already satisfied: asgiref<4,>=3.4.1 in /usr/local/lib/python3.9/dist-packages (from django>=2.2->djangorestframework) (3.5.0)
+Requirement already satisfied: sqlparse>=0.2.2 in /usr/local/lib/python3.9/dist-packages (from django>=2.2->djangorestframework) (0.4.2)
+Installing collected packages: pytz, djangorestframework
+Successfully installed djangorestframework-3.13.1 pytz-2021.3
+pi@raspberrypi:~/CPE-322 $ sudo pip3 install -U django-filter
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting django-filter
+  Downloading https://www.piwheels.org/simple/django-filter/django_filter-21.1-py3-none-any.whl (81 kB)
+     |████████████████████████████████| 81 kB 370 kB/s 
+Requirement already satisfied: Django>=2.2 in /usr/local/lib/python3.9/dist-packages (from django-filter) (4.0.2)
+Requirement already satisfied: sqlparse>=0.2.2 in /usr/local/lib/python3.9/dist-packages (from Django>=2.2->django-filter) (0.4.2)
+Requirement already satisfied: asgiref<4,>=3.4.1 in /usr/local/lib/python3.9/dist-packages (from Django>=2.2->django-filter) (3.5.0)
+Installing collected packages: django-filter
+Successfully installed django-filter-21.1
+pi@raspberrypi:~/CPE-322 $ sudo pip3 install -U markdown
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting markdown
+  Downloading https://www.piwheels.org/simple/markdown/Markdown-3.3.6-py3-none-any.whl (97 kB)
+     |████████████████████████████████| 97 kB 405 kB/s 
+Collecting importlib-metadata>=4.4
+  Downloading https://www.piwheels.org/simple/importlib-metadata/importlib_metadata-4.11.2-py3-none-any.whl (17 kB)
+Collecting zipp>=0.5
+  Downloading https://www.piwheels.org/simple/zipp/zipp-3.7.0-py3-none-any.whl (5.3 kB)
+Installing collected packages: zipp, importlib-metadata, markdown
+Successfully installed importlib-metadata-4.11.2 markdown-3.3.6 zipp-3.7.0
+pi@raspberrypi:~/CPE-322 $ sudo pip3 install -U requests
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (2.25.1)
+Collecting requests
+  Downloading https://www.piwheels.org/simple/requests/requests-2.27.1-py2.py3-none-any.whl (63 kB)
+     |████████████████████████████████| 63 kB 203 kB/s 
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/lib/python3/dist-packages (from requests) (1.26.5)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests) (2020.6.20)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests) (2.10)
+Collecting charset-normalizer~=2.0.0
+  Downloading https://www.piwheels.org/simple/charset-normalizer/charset_normalizer-2.0.12-py3-none-any.whl (44 kB)
+     |████████████████████████████████| 44 kB 287 kB/s 
+Installing collected packages: charset-normalizer, requests
+  Attempting uninstall: requests
+    Found existing installation: requests 2.25.1
+    Not uninstalling requests at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'requests'. No files were found to uninstall.
+Successfully installed charset-normalizer-2.0.12 requests-2.27.1

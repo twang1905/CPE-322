@@ -1,0 +1,4 @@
+pi@raspberrypi:~/stevens/myapp/templates/myapp $ cp ~/iot/lesson4/stevens/index.html
+</style>
+  <script src="https://maps.googleapis.com/maps/api/js?key=REDACTED"></script>
+<script>

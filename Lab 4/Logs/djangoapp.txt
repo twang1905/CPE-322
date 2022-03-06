@@ -1,0 +1,3 @@
+pi@raspberrypi:~/stevens $ python3 manage.py startapp myapp
+pi@raspberrypi:~/stevens $ ls
+manage.py  myapp  stevens

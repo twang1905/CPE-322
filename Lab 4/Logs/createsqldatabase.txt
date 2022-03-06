@@ -1,0 +1,56 @@
+pi@raspberrypi:~/stevens $ sudo mysql -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 36
+Server version: 10.5.12-MariaDB-0+deb11u1 Raspbian 11
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use mysql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [mysql]> select user, host from mysql.user;
++-------------+-----------+
+| User        | Host      |
++-------------+-----------+
+| mariadb.sys | localhost |
+| mysql       | localhost |
+| root        | localhost |
++-------------+-----------+
+3 rows in set (0.007 sec)
+
+MariaDB [mysql]> create user pi@localhost identified by 'PASSWORD';
+Query OK, 0 rows affected (0.022 sec)
+
+MariaDB [mysql]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+3 rows in set (0.002 sec)
+
+MariaDB [mysql]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+3 rows in set (0.002 sec)
+
+MariaDB [mysql]> create database stevens;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [mysql]> grant all privileges on stevens.* to pi@localhost;
+Query OK, 0 rows affected (0.008 sec)
+
+MariaDB [mysql]> quit
+Bye

@@ -1,0 +1,2 @@
+pi@raspberrypi:~/stevens/stevens $ cp ~/iot/lesson4/stevens/urls.py .
+pi@raspberrypi:~/stevens/stevens $ cd ..

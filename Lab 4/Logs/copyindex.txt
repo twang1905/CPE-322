@@ -1,0 +1,5 @@
+pi@raspberrypi:~/stevens/myapp $ mkdir static templates
+pi@raspberrypi:~/stevens/myapp $ cd templates
+pi@raspberrypi:~/stevens/myapp/templates $ mkdir myapp
+pi@raspberrypi:~/stevens/myapp/templates $ cd myapp
+pi@raspberrypi:~/stevens/myapp/templates/myapp $ cp ~/iot/lesson4/stevens/index.html .
