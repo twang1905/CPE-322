@@ -1,0 +1,23 @@
+pi@raspberrypi:~ $ sudo pip3 install -U paho-mqtt
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting paho-mqtt
+  Downloading https://www.piwheels.org/simple/paho-mqtt/paho_mqtt-1.6.1-py3-none-any.whl (75 kB)
+     |████████████████████████████████| 75 kB 307 kB/s 
+Installing collected packages: paho-mqtt
+Successfully installed paho-mqtt-1.6.1
+pi@raspberrypi:~ $ git clone https://github.com/eclipse/paho.mqtt.python.git
+Cloning into 'paho.mqtt.python'...
+remote: Enumerating objects: 4491, done.
+remote: Counting objects: 100% (929/929), done.
+remote: Compressing objects: 100% (369/369), done.
+remote: Total 4491 (delta 547), reused 826 (delta 490), pack-reused 3562
+Receiving objects: 100% (4491/4491), 1.37 MiB | 2.35 MiB/s, done.
+Resolving deltas: 100% (2395/2395), done.
+pi@raspberrypi:~ $ cd ~/iot/lesson5
+pi@raspberrypi:~/iot/lesson5 $ python3 client.py
+Connected with result code 0
+$SYS/broker/publish/messages/dropped 9544892
+$SYS/broker/publish/messages/received 73789285
+$SYS/broker/publish/messages/sent 121116503
+$SYS/broker/publish/bytes/received 13047535652
+$SYS/broker/publish/bytes/sent 14654841558

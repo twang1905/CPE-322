@@ -1,0 +1,207 @@
+pi@raspberrypi:~ $ sudo apt update
+Hit:1 http://archive.raspberrypi.org/debian bullseye InRelease
+Hit:2 http://raspbian.raspberrypi.org/raspbian bullseye InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+24 packages can be upgraded. Run 'apt list --upgradable' to see them.
+pi@raspberrypi:~ $ sudo apt install mosquitto mosquitto-clients
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  libcjson1 libdlt2 libev4 libmosquitto1 libwebsockets16
+Suggested packages:
+  apparmor
+The following NEW packages will be installed:
+  libcjson1 libdlt2 libev4 libmosquitto1 libwebsockets16 mosquitto mosquitto-clients
+0 upgraded, 7 newly installed, 0 to remove and 24 not upgraded.
+Need to get 701 kB of archives.
+After this operation, 1,725 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://raspbian.mirror.constant.com/raspbian bullseye/main armhf libcjson1 armhf 1.7.14-1 [20.8 kB]
+Get:2 http://raspbian.mirror.constant.com/raspbian bullseye/main armhf libdlt2 armhf 2.18.6-1 [45.3 kB]
+Get:3 http://raspbian.mirror.constant.com/raspbian bullseye/main armhf libev4 armhf 1:4.33-1 [38.2 kB]
+Get:4 http://raspbian.mirror.constant.com/raspbian bullseye/main armhf libmosquitto1 armhf 2.0.11-1 [83.4 kB]
+Get:5 http://raspbian.mirror.constant.com/raspbian bullseye/main armhf libwebsockets16 armhf 4.0.20-2 [161 kB]
+Get:6 http://raspbian.mirror.constant.com/raspbian bullseye/main armhf mosquitto armhf 2.0.11-1 [243 kB]
+Get:7 http://raspbian.mirror.constant.com/raspbian bullseye/main armhf mosquitto-clients armhf 2.0.11-1 [110 kB]
+Fetched 701 kB in 4s (192 kB/s)             
+Selecting previously unselected package libcjson1:armhf.
+(Reading database ... 104842 files and directories currently installed.)
+Preparing to unpack .../0-libcjson1_1.7.14-1_armhf.deb ...
+Unpacking libcjson1:armhf (1.7.14-1) ...
+Selecting previously unselected package libdlt2:armhf.
+Preparing to unpack .../1-libdlt2_2.18.6-1_armhf.deb ...
+Unpacking libdlt2:armhf (2.18.6-1) ...
+Selecting previously unselected package libev4:armhf.
+Preparing to unpack .../2-libev4_1%3a4.33-1_armhf.deb ...
+Unpacking libev4:armhf (1:4.33-1) ...
+Selecting previously unselected package libmosquitto1:armhf.
+Preparing to unpack .../3-libmosquitto1_2.0.11-1_armhf.deb ...
+Unpacking libmosquitto1:armhf (2.0.11-1) ...
+Selecting previously unselected package libwebsockets16:armhf.
+Preparing to unpack .../4-libwebsockets16_4.0.20-2_armhf.deb ...
+Unpacking libwebsockets16:armhf (4.0.20-2) ...
+Selecting previously unselected package mosquitto.
+Preparing to unpack .../5-mosquitto_2.0.11-1_armhf.deb ...
+Unpacking mosquitto (2.0.11-1) ...
+Selecting previously unselected package mosquitto-clients.
+Preparing to unpack .../6-mosquitto-clients_2.0.11-1_armhf.deb ...
+Unpacking mosquitto-clients (2.0.11-1) ...
+Setting up libmosquitto1:armhf (2.0.11-1) ...
+Setting up libev4:armhf (1:4.33-1) ...
+Setting up libcjson1:armhf (1.7.14-1) ...
+Setting up mosquitto-clients (2.0.11-1) ...
+Setting up libdlt2:armhf (2.18.6-1) ...
+Setting up libwebsockets16:armhf (4.0.20-2) ...
+Setting up mosquitto (2.0.11-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/mosquitto.service → /lib/systemd/sy
+stem/mosquitto.service.
+Processing triggers for man-db (2.9.4-2) ...
+Processing triggers for libc-bin (2.31-13+rpt2+rpi1+deb11u2) ...
+pi@raspberrypi:~ $ mosquitto_sub -h localhost -v -t "\$SYS/#"
+$SYS/broker/version mosquitto version 2.0.11
+$SYS/broker/uptime 11 seconds
+$SYS/broker/clients/total 0
+$SYS/broker/clients/inactive 0
+$SYS/broker/clients/disconnected 0
+$SYS/broker/clients/active 0
+$SYS/broker/clients/connected 0
+$SYS/broker/clients/expired 0
+$SYS/broker/load/messages/received/1min 0.00
+$SYS/broker/load/messages/received/5min 0.00
+$SYS/broker/load/messages/received/15min 0.00
+$SYS/broker/load/messages/sent/1min 0.00
+$SYS/broker/load/messages/sent/5min 0.00
+$SYS/broker/load/messages/sent/15min 0.00
+$SYS/broker/load/publish/dropped/1min 0.00
+$SYS/broker/load/publish/dropped/5min 0.00
+$SYS/broker/load/publish/dropped/15min 0.00
+$SYS/broker/load/publish/received/1min 0.00
+$SYS/broker/load/publish/received/5min 0.00
+$SYS/broker/load/publish/received/15min 0.00
+$SYS/broker/load/publish/sent/1min 0.00
+$SYS/broker/load/publish/sent/5min 0.00
+$SYS/broker/load/publish/sent/15min 0.00
+$SYS/broker/load/bytes/received/1min 0.00
+$SYS/broker/load/bytes/received/5min 0.00
+$SYS/broker/load/bytes/received/15min 0.00
+$SYS/broker/load/bytes/sent/1min 0.00
+$SYS/broker/load/bytes/sent/5min 0.00
+$SYS/broker/load/bytes/sent/15min 0.00
+$SYS/broker/load/sockets/1min 0.00
+$SYS/broker/load/sockets/5min 0.00
+$SYS/broker/load/sockets/15min 0.00
+$SYS/broker/load/connections/1min 0.00
+$SYS/broker/load/connections/5min 0.00
+$SYS/broker/load/connections/15min 0.00
+$SYS/broker/messages/stored 52
+$SYS/broker/messages/received 0
+$SYS/broker/messages/sent 0
+$SYS/broker/store/messages/count 52
+$SYS/broker/store/messages/bytes 178
+$SYS/broker/subscriptions/count 0
+$SYS/broker/shared_subscriptions/count 0
+$SYS/broker/retained messages/count 52
+$SYS/broker/heap/current 26184
+$SYS/broker/heap/maximum 26392
+$SYS/broker/publish/messages/dropped 0
+$SYS/broker/publish/messages/received 0
+$SYS/broker/publish/messages/sent 0
+$SYS/broker/publish/bytes/received 0
+$SYS/broker/publish/bytes/sent 0
+$SYS/broker/bytes/received 0
+$SYS/broker/bytes/sent 0
+$SYS/broker/uptime 22 seconds
+$SYS/broker/clients/total 1
+$SYS/broker/clients/maximum 1
+$SYS/broker/clients/active 1
+$SYS/broker/clients/connected 1
+$SYS/broker/load/messages/received/1min 1.83
+$SYS/broker/load/messages/sent/1min 53.91
+$SYS/broker/load/publish/sent/1min 52.08
+$SYS/broker/load/bytes/received/1min 24.67
+$SYS/broker/load/bytes/sent/1min 2029.30
+$SYS/broker/load/sockets/1min 0.91
+$SYS/broker/load/connections/1min 0.91
+$SYS/broker/load/messages/received/5min 0.39
+$SYS/broker/load/messages/sent/5min 11.59
+$SYS/broker/load/publish/sent/5min 11.19
+$SYS/broker/load/bytes/received/5min 5.30
+$SYS/broker/load/bytes/sent/5min 436.15
+$SYS/broker/load/sockets/5min 0.20
+$SYS/broker/load/connections/5min 0.20
+$SYS/broker/load/messages/received/15min 0.13
+$SYS/broker/load/messages/sent/15min 3.91
+$SYS/broker/load/publish/sent/15min 3.78
+$SYS/broker/load/bytes/received/15min 1.79
+$SYS/broker/load/bytes/sent/15min 147.17
+$SYS/broker/load/sockets/15min 0.07
+$SYS/broker/load/connections/15min 0.07
+$SYS/broker/messages/stored 53
+$SYS/broker/store/messages/count 53
+$SYS/broker/store/messages/bytes 191
+$SYS/broker/subscriptions/count 1
+$SYS/broker/retained messages/count 53
+$SYS/broker/heap/current 30468
+$SYS/broker/heap/maximum 30832
+$SYS/broker/messages/received 2
+$SYS/broker/messages/sent 88
+$SYS/broker/publish/messages/sent 87
+$SYS/broker/bytes/received 27
+$SYS/broker/bytes/sent 3511
+$SYS/broker/publish/bytes/sent 319
+$SYS/broker/uptime 33 seconds
+$SYS/broker/load/messages/received/1min 1.52
+$SYS/broker/load/messages/sent/1min 50.36
+$SYS/broker/load/publish/sent/1min 47.92
+$SYS/broker/load/bytes/received/1min 20.54
+$SYS/broker/load/bytes/sent/1min 1779.83
+$SYS/broker/load/sockets/1min 0.76
+$SYS/broker/load/connections/1min 0.76
+$SYS/broker/load/messages/received/5min 0.38
+$SYS/broker/load/messages/sent/5min 12.35
+$SYS/broker/load/publish/sent/5min 11.77
+$SYS/broker/load/bytes/received/5min 5.11
+$SYS/broker/load/bytes/sent/5min 439.89
+$SYS/broker/load/messages/sent/15min 4.26
+$SYS/broker/load/publish/sent/15min 4.06
+$SYS/broker/load/bytes/received/15min 1.77
+$SYS/broker/load/bytes/sent/15min 151.94
+$SYS/broker/store/messages/bytes 199
+$SYS/broker/heap/current 30916
+$SYS/broker/heap/maximum 31336
+$SYS/broker/messages/sent 113
+$SYS/broker/publish/messages/sent 112
+$SYS/broker/bytes/sent 4482
+$SYS/broker/publish/bytes/sent 431
+pi@raspberrypi:~ $ service mosquitto status
+● mosquitto.service - Mosquitto MQTT Broker
+     Loaded: loaded (/lib/systemd/system/mosquitto.service; enabled; vendor pre>
+     Active: active (running) since Sun 2022-03-06 18:10:14 EST; 4min 10s ago
+       Docs: man:mosquitto.conf(5)
+             man:mosquitto(8)
+    Process: 3653 ExecStartPre=/bin/mkdir -m 740 -p /var/log/mosquitto (code=ex>
+    Process: 3654 ExecStartPre=/bin/chown mosquitto /var/log/mosquitto (code=ex>
+    Process: 3655 ExecStartPre=/bin/mkdir -m 740 -p /run/mosquitto (code=exited>
+    Process: 3656 ExecStartPre=/bin/chown mosquitto /run/mosquitto (code=exited>
+   Main PID: 3657 (mosquitto)
+      Tasks: 1 (limit: 1597)
+        CPU: 233ms
+     CGroup: /system.slice/mosquitto.service
+             └─3657 /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
+
+Mar 06 18:10:13 raspberrypi systemd[1]: Starting Mosquitto MQTT Broker...
+Mar 06 18:10:14 raspberrypi systemd[1]: Started Mosquitto MQTT Broker.
+pi@raspberrypi:~ $ netstat -tln
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:1883          0.0.0.0:*               LISTEN     
+tcp6       0      0 ::1:631                 :::*                    LISTEN     
+tcp6       0      0 ::1:1883                :::*                    LISTEN  
