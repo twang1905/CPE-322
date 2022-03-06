@@ -333,11 +333,90 @@ MariaDB [mysql]> quit
 Bye
 ```
 
-### Start a Django project
+### Edit settings.py in ~/stevens/stevens
 
 ```
-pi@raspberrypi:~ $ django-admin startproject stevens
-pi@raspberrypi:~ $ cd stevens
-pi@raspberrypi:~/stevens $ ls
-manage.py  stevens
+pi@raspberrypi:~/stevens $ cd stevens
+pi@raspberrypi:~/stevens/stevens $ ls
+asgi.py  __init__.py  __pycache__  settings.py  urls.py  wsgi.py
+pi@raspberrypi:~/stevens/stevens $ nano settings.py
+```
+
+### Copy urls.py to ~/stevens/stevens
+
+```
+pi@raspberrypi:~/stevens/stevens $ cp ~/iot/lesson4/stevens/urls.py .
+pi@raspberrypi:~/stevens/stevens $ cd ..
+```
+
+### Copy admin.py, models.py, and views.py to ~/stevens/myapp
+
+```
+pi@raspberrypi:~/stevens $ cd myapp
+pi@raspberrypi:~/stevens/myapp $ ls
+admin.py  apps.py  __init__.py  migrations  models.py  tests.py  views.py
+pi@raspberrypi:~/stevens/myapp $ cp ~/iot/lesson4/stevens/admin.py .
+pi@raspberrypi:~/stevens/myapp $ cp ~/iot/lesson4/stevens/models.py .
+pi@raspberrypi:~/stevens/myapp $ cp ~/iot/lesson4/stevens/views.py .
+```
+
+### Edit index.html to add the Google Maps API key
+
+```
+pi@raspberrypi:~/stevens/myapp/templates/myapp $ cp ~/iot/lesson4/stevens/index.html
+</style>
+  <script src="https://maps.googleapis.com/maps/api/js?key=REDACTED"></script>
+<script>
+```
+
+### Copy static files
+
+```
+pi@raspberrypi:~/stevens/myapp/templates/myapp $ cd ~/stevens/myapp/static
+pi@raspberrypi:~/stevens/myapp/static $ cp ~/iot/lesson4/static/favicon.ico .
+pi@raspberrypi:~/stevens/myapp/static $ mkdir myapp
+pi@raspberrypi:~/stevens/myapp/static $ cd myapp
+pi@raspberrypi:~/stevens/myapp/static/myapp $ cp ~/iot/lesson4/static/*css .
+pi@raspberrypi:~/stevens/myapp/static/myapp $ cp ~/iot/lesson4/static/*js .
+pi@raspberrypi:~/stevens/myapp/static/myapp $ cd ~/stevens
+```
+
+### Run Django server (error)
+
+```
+pi@raspberrypi:~/stevens $ python3 manage.py makemigrations myapp
+Migrations for 'myapp':
+  myapp/migrations/0001_initial.py
+    - Create model TemperatureData
+pi@raspberrypi:~/stevens $ python3 manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, myapp, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying myapp.0001_initial... OK
+  Applying sessions.0001_initial... OK
+pi@raspberrypi:~/stevens $ python3 manage.py createsuperuser
+Username (leave blank to use 'pi'): 
+Email address: twang51@stevens.edu
+Password: 
+Password (again): 
+Superuser created successfully.
+pi@raspberrypi:~/stevens $ pi@raspberrypi:~/stevens $ python3 manage.py runserver
+bash: pi@raspberrypi:~/stevens: No such file or directory
 ```
