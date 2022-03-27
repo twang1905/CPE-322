@@ -1,0 +1,4 @@
+pi@raspberrypi:~/demo $ cp ~/iot/lesson3/system_info.py .
+pi@raspberrypi:~/demo $ cp ~/iot/lesson7/rpi_spreadsheet.py .
+pi@raspberrypi:~/demo $ mv ~/Downloads/rpidata-*.json ~/demo
+mv: cannot stat '/home/pi/Downloads/rpidata-*.json': No such file or directory
