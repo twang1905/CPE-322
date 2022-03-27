@@ -1,0 +1,9 @@
+pi@raspberrypi:~ $ cd ~/iot/lesson6
+pi@raspberrypi:~/iot/lesson6 $ node hello-world.js
+Server running at http://127.0.0.1:3000/
+^C
+pi@raspberrypi:~/iot/lesson6 $ node hello.js
+Server running at http://127.0.0.1:8080/
+response end call done
+request end event fired
+^C

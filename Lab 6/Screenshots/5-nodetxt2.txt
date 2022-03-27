@@ -1,0 +1,6 @@
+pi@raspberrypi:~/iot/lesson6 $ node http.js
+0
+
+1
+2
+^C
